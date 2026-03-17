@@ -1,0 +1,26 @@
+# Godot 4 — generated files
+.godot/
+
+# Godot 3 — generated files (kept for safety if project ever opened in Godot 3)
+.import/
+
+# Export presets — contains paths and may contain signing credentials
+export_presets.cfg
+
+# Compiled translations (generated from .po files at build time)
+*.translation
+
+# Mono / C# build artifacts (not used here, but included for safety)
+.mono/
+data_*/
+mono_crash.*.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code (keep .vscode/ if you use workspace settings, otherwise ignore)
+# .vscode/
