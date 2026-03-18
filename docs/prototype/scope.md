@@ -22,8 +22,12 @@ The prototype's sole purpose is to prove the core loop: **sail, trade, time, ran
   - **Boat-relative:** the angle of the wind relative to the boat's heading (used for sail selection decisions), displayed as part of the sailing HUD
 - **Three sail configurations:** Jib (upwind), Genoa (reaching), Spinnaker (downwind) — selectable by the player
 - A **brief delay** when switching sail configurations (representing crew work)
-- Boat speed calculated from the multiplicative upgrade formula and a wind angle factor:
-  > `speed = (headsail × mainsail × spinnaker × hull × weight_reduction) × wind_angle_factor(sail_config, angle_to_wind)`
+- Boat speed calculated per sail configuration — only the upgrades relevant to the active sail apply:
+  > **Jib:** `speed = (headsail × mainsail × hull × weight_reduction) × f(jib, θ)`
+  > **Genoa:** `speed = (headsail × mainsail × hull × weight_reduction) × f(genoa, θ)`
+  > **Spinnaker:** `speed = (mainsail × spinnaker × hull × weight_reduction) × f(spinnaker, θ)`
+  >
+  > See [sailing-mechanics.md](../design/sailing-mechanics.md) for the full wind angle factor table.
 - The boat is steerable but subject to wind — sailing directly into the wind results in minimal forward progress (no-go zone)
 - No penalty for carrying cargo — speed is cargo-agnostic
 
