@@ -50,20 +50,22 @@ flowchart LR
 
 Players earn money through trading — buying goods cheaply at one settlement and selling them at a premium elsewhere. Money funds boat upgrades across six categories:
 
-| Upgrade | Effect |
-|---|---|
-| Head Sail | Upwind speed |
-| Main Sail | Upwind and downwind speed |
-| Spinnaker | Downwind speed |
-| Hull | Reduced drag (universal speed) |
-| Weight Reduction | Reduced drag (universal speed) |
-| Cargo Capacity | Larger trading capacity |
+| Upgrade | Applies to | Effect |
+|---|---|---|
+| Headsail | Jib, Genoa | Upwind and reaching speed |
+| Mainsail | Jib, Genoa, Spinnaker | Speed in all configurations |
+| Spinnaker | Spinnaker | Downwind speed |
+| Hull | All | Reduced drag (universal speed) |
+| Weight Reduction | All | Reduced drag (universal speed) |
+| Cargo Capacity | — | Larger trading capacity |
 
-The prototype includes one upgrade tier per category. The full game targets three or four tiers each. Speed upgrades apply equally regardless of cargo load.
+The prototype includes one upgrade tier per category. The full game targets three or four tiers each. Speed upgrades apply equally regardless of cargo load. Each upgrade only applies to the sail configurations where that sail is flying — a Spinnaker upgrade has no effect on upwind speed, and a Headsail upgrade has no effect when running downwind.
 
-Overall boat speed is calculated as:
+Boat speed per configuration is calculated as:
 
-> `speed = (headsail × mainsail × spinnaker × hull × weight_reduction) × wind_angle_factor(sail_config, angle_to_wind)`
+> **Jib:** `speed = (headsail × mainsail × hull × weight_reduction) × f(jib, θ)`
+> **Genoa:** `speed = (headsail × mainsail × hull × weight_reduction) × f(genoa, θ)`
+> **Spinnaker:** `speed = (mainsail × spinnaker × hull × weight_reduction) × f(spinnaker, θ)`
 
 ---
 

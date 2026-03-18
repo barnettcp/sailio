@@ -20,7 +20,7 @@ The prototype's sole purpose is to prove the core loop: **sail, trade, time, ran
 - **Wind display:** wind direction is shown to the player at all times in two forms:
   - **Map-relative:** the true compass direction of the wind at the boat's current position (e.g., wind arrow on the HUD or minimap)
   - **Boat-relative:** the angle of the wind relative to the boat's heading (used for sail selection decisions), displayed as part of the sailing HUD
-- **Three sail configurations:** Upwind, Reaching, Downwind — selectable by the player
+- **Three sail configurations:** Jib (upwind), Genoa (reaching), Spinnaker (downwind) — selectable by the player
 - A **brief delay** when switching sail configurations (representing crew work)
 - Boat speed calculated from the multiplicative upgrade formula and a wind angle factor:
   > `speed = (headsail × mainsail × spinnaker × hull × weight_reduction) × wind_angle_factor(sail_config, angle_to_wind)`
@@ -46,14 +46,14 @@ The prototype's sole purpose is to prove the core loop: **sail, trade, time, ran
 - Upgrades are purchased with money earned from trading
 - Six upgrade categories, each with a base value and one upgraded value:
 
-| Upgrade | Affects |
-|---|---|
-| Head Sail | Upwind speed factor |
-| Main Sail | Upwind and downwind speed factor |
-| Spinnaker | Downwind speed factor |
-| Hull | Universal speed factor |
-| Weight Reduction | Universal speed factor |
-| Cargo Capacity | Maximum cargo slots |
+| Upgrade | Applies to | Affects |
+|---|---|---|
+| Headsail | Jib, Genoa | Upwind and reaching speed factor |
+| Mainsail | Jib, Genoa, Spinnaker | Speed factor in all configurations |
+| Spinnaker | Spinnaker | Downwind speed factor |
+| Hull | All | Universal speed factor |
+| Weight Reduction | All | Universal speed factor |
+| Cargo Capacity | — | Maximum cargo slots |
 
 - Upgrades persist across play sessions (saved to disk)
 
