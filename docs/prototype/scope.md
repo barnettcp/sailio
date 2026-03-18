@@ -109,9 +109,10 @@ The following are **not** built in the prototype. They are recorded here so they
 | Idle activity economy (busking, selling fish) | Deferred |
 | Animal / character theme | Deferred; placeholder models are character-agnostic |
 | NPC dialogue or quests | No narrative layer in prototype |
-| Tides or hazards | No environmental hazards |
 | Day/night cycle | Deferred |
 | Music | Deferred |
+| Waves and wave physics | Visual and physical effect; world boundary and boat physics should not assume flat calm water permanently |
+| Tides and variable water depth | World boundary geometry should be designed to support future tidal variation; do not hardcode as a fixed static polygon |
 | Visual polish (lighting, shaders, particles) | Deferred; placeholder visuals only |
 | Mobile / gamepad input | Prototype targets keyboard/mouse only |
 | Settings menu | Deferred (no audio sliders, keybinding, etc.) |
