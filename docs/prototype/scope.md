@@ -63,7 +63,7 @@ The prototype's sole purpose is to prove the core loop: **sail, trade, time, ran
 
 ### Timer & Racing System
 - A timer **starts automatically** when the player departs a settlement
-- The timer **stops and is recorded** when the player enters another settlement's dock zone
+- The timer **stops and is recorded** when the player enters another settlement's **dock zone** (a circular trigger area around each settlement, visible on the minimap)
 - Times are stored **locally** per route (origin → destination, directional)
 - A **top-3 leaderboard** per route is displayed at each settlement (or on the in-game map/HUD)
 - Records persist across play sessions (saved to disk)
