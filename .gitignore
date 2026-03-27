@@ -24,3 +24,6 @@ desktop.ini
 
 # VS Code (keep .vscode/ if you use workspace settings, otherwise ignore)
 # .vscode/
+
+# Development and temporary notes
+notes/
