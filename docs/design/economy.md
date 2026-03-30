@@ -50,15 +50,15 @@ Higher-value goods are more profitable absolutely, but their producer settlement
 
 Concrete prices require the five settlements to be defined first. Once [prototype/settlements.md](../prototype/settlements.md) is written, a full price matrix will be added here:
 
-| Good | Settlement A | Settlement B | Settlement C | Settlement D | Settlement E |
+| Good | Rockaway | Gopher's Bay | Woollie | Lincolnston | Greenway |
 |---|---|---|---|---|---|
-| Timber | — | — | — | — | — |
-| Rope | — | — | — | — | — |
-| Sailcloth | — | — | — | — | — |
-| Ironwork | — | — | — | — | — |
-| Charts | — | — | — | — | — |
+| Timber | 40 | 40 | 60 | 40 | 18 |
+| Rope | 25 | 83 | 55 | 55 | 55 |
+| Sailcloth | 75 | 75 | 34 | 113 | 75 |
+| Ironwork | 100 | 100 | 100 | 45 | 150 |
+| Charts | 195 | 59 | 130 | 130 | 130 |
 
-*To be filled once settlements are named and assigned.*
+*See [prototype/settlements.md](../prototype/settlements.md) for full settlement details.*
 
 ---
 
@@ -140,4 +140,4 @@ The following are deferred from the prototype but should not be architecturally 
 | Goods as upgrade materials | Future pass may require specific goods at a boatyard, not just gold |
 | Cosmetic purchases | Gold may eventually be spent on visual customisation |
 | Perishable goods | Time-sensitive cargo that degrades if the voyage takes too long |
-
+| Rare and One-off Items | Task/Quest-related and/or for sale at a specific other settlement |
