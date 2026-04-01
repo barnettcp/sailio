@@ -29,7 +29,9 @@ For map placement context, see [design/world.md](../design/world.md).
 
 This is where the player begins. Rockaway is a modest fishing harbour tucked into a sheltered southwest bay at the southern end of the map. It's the most sheltered and approachable port — a natural starting point. The player's first sail out of Rockaway opens into the main body of water with room to find their bearings.
 
-Rockaway produces Rope in quantity (fishing lines, rigging, mooring lines — the village runs on it). The locals have little use for Charts; they know these waters by feel. A Navigator's chart is a luxury, and they'll pay well for one.
+Rockaway produces Rope in quantity (fishing lines, rigging, mooring lines — the village runs on it). The villagers here love angling and relaxing. Experts of the local waterways, they love to laze around and study local nautical charts. This puts charts of all kind in high demand. 
+
+The land surrounding Rockaway are rolling hills with some pretty trees. Houses dot the landscape. The long dock allows for ships to tie off as well as contains a market made up of a small row of colorful tents.
 
 **Tutorial role:** The player starts here with a small purse and a hold containing 2 units of Rope and 1 unit of Timber. A hint directs them toward Gopher's Bay, where Rope sells at a premium. After their first successful trade, Rockaway becomes simply another port of call.
 
@@ -43,7 +45,9 @@ Rockaway produces Rope in quantity (fishing lines, rigging, mooring lines — th
 
 Gopher's Bay is the tutorial destination and sits in the eastern-centre of the map — a natural diagonal crossing northeast from Rockaway across open water. The chart house dominates the waterfront and is recognisable from a distance — players will learn to navigate to it by sight.
 
-The settlement produces Charts (printed, copied, and bound here from the accumulated knowledge of generations of navigators). Rope is the one thing chart-makers, bookbinders, and scribes all need and can never make themselves — so it commands a premium here.
+The settlement produces Charts (printed, copied, and bound here from the accumulated knowledge of generations of navigators). Rope is the one thing chart-makers, bookbinders, and scribes all need and can never make themselves so it commands a premium here.
+
+Gopher's bay is bright and cheerful, with houses painted in many bright colors. Some groups of colorful bulidings are only visible as you enter the bay, with residents choosing to paint their outward facing walls a more bland color. The land around this bay slopes gently inward, creating a protected and peaceful pace.
 
 **Trade note:** Charts bought here cheaply are best sold at Rockaway (which wants them) or carried onward to any port where navigation knowledge is scarce.
 
@@ -59,7 +63,9 @@ The settlement produces Charts (printed, copied, and bound here from the accumul
 
 Woollie occupies the central island in the northern half of the map. The island divides the upper channel into two passages: the western passage is wider and more direct toward Lincolnston; the eastern passage is narrower and angles toward Greenway. Players will develop a preference based on wind conditions.
 
-The windmills are the island's defining image — they power the looms and card the wool that becomes the finest sailcloth on the water. Woollie needs Timber constantly: for loom frames, mill repairs, dock maintenance, and buildings. The island grows nothing taller than scrub.
+The windmills are the island's defining image. They power the looms and card the wool that becomes the finest sailcloth on the water. Woollie needs Timber constantly: for loom frames, mill repairs, dock maintenance, and buildings. With only a few patches of trees, the island grows very little that is taller than scrub.
+
+The hills are a bright green grass, dotted with small herds of sheep among the bright white windmills. In some places the island's hills are rocky and steep, but mostly green. Very few buildings are outside of the town of Woollie, but those that are well-kept.
 
 **Trade note:** Sailcloth bought here cheaply is most wanted at Lincolnston (Foundry Harbour), which uses it for bellows, covers, and industrial cloth.
 
@@ -74,6 +80,8 @@ The windmills are the island's defining image — they power the looms and card 
 Lincolnston is the industrial heart of the world, sitting on the western shore in the centre of the map. It produces Ironwork — nails, cleats, fittings, chain, anchors — everything that holds a boat together and keeps a harbour functioning. The foundry runs on coal and bellows, and the bellows wear out. Sailcloth is always in demand.
 
 The smoke stack is visible from a fair distance and serves as a navigational marker on the western shore. Lincolnston is a natural mid-point on routes between the island and the southern shore.
+
+The buildings here have a more modern feel, but still the atmosphere is friendly. Monochromatic tones are more common, but artfully done.
 
 **Trade note:** Ironwork bought here cheaply is most wanted at Greenway (Forest Town), which needs it for logging tools and mill machinery.
 
@@ -90,6 +98,8 @@ Greenway occupies a forested headland at the northern end of the map. The giant 
 The loggers and millworkers need good iron tools — axes, saw blades, adzes — and the local forge can't keep up with demand. Ironwork from Lincolnston is always welcome here.
 
 Greenway is a natural endpoint for south-to-north routes and sits at the far end of the map from Rockaway, making a Rockaway–Greenway crossing one of the longer routes and a strong record-setting target.
+
+Despite Greenway's industry of logging, trees are revered here and they are proud to be home to the many tall trees. Some nearby hillsides contain plots of land at various stages of growth for continuous and sustainable harvest of trees.
 
 **Trade note:** Timber bought here cheaply is most wanted at Woollie (Weaving Port), which needs it for loom and mill maintenance.
 
