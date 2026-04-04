@@ -19,7 +19,7 @@ The project is currently in the design phase. Specification documents are being 
 | [docs/design/progression.md](docs/design/progression.md) | Boat upgrades, tiers, tradeoffs |
 | [docs/design/settlements.md](docs/design/settlements.md) | Port services, merchant design |
 | [docs/design/racing-and-timers.md](docs/design/racing-and-timers.md) | Timer logic, leaderboards, route ranking |
-| [docs/design/idle-activities.md](docs/design/idle-activities.md) | Fishing, instruments, and other modular idle systems |
+| [docs/design/world-activities.md](docs/design/world-activities.md) | Fishing, instruments, floating cargo, and other non-sailing world activities |
 | [docs/ux/ui-flows.md](docs/ux/ui-flows.md) | Screens, HUD, and menus |
 | [docs/art/direction.md](docs/art/direction.md) | Visual style, palette, tone |
 | [docs/prototype/scope.md](docs/prototype/scope.md) | What is in v0.1 and what is explicitly deferred |

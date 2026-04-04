@@ -109,8 +109,8 @@ The following are **not** built in the prototype. They are recorded here so they
 | Online leaderboards | Local records only |
 | Ghost boat replays | Deferred to post-prototype online feature |
 | Multiplayer / async other players | Deferred entirely |
-| Idle activities (fishing, instruments) | Full system deferred; no placeholder needed |
-| Idle activity economy (busking, selling fish) | Deferred |
+| Idle activities (fishing, instruments, messages in a bottle, floating cargo recovery) | Full system deferred; no placeholder needed. See [design/world-activities.md](../design/world-activities.md) |
+| Idle activity economy (selling fish, floating cargo rewards) | Deferred |
 | Animal / character theme | Deferred; placeholder models are character-agnostic |
 | NPC dialogue or quests | No narrative layer in prototype |
 | Day/night cycle | Deferred |
