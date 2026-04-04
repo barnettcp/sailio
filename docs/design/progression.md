@@ -100,7 +100,7 @@ The boat yard is available at every settlement. It presents:
 
 In the prototype, all Tier 1 upgrades are available immediately from the start of the game. There are no unlock conditions, prerequisite purchases, or level gates.
 
-> **Future:** Later tiers could require visiting a specific settlement's boat yard (e.g., only Lincolnston can apply Hull upgrades beyond Tier 2 because it has the best forge). This creates travel incentives beyond trade — but is firmly deferred.
+> **Future:** Later tiers could require visiting a specific settlement's boat yard (e.g., only Lincolnston can apply Hull upgrades beyond Tier 2 because it has the best forge). This creates travel incentives beyond trade, but is firmly deferred.
 
 ---
 
