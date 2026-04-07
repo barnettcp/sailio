@@ -121,6 +121,7 @@ The following are **not** built in the prototype. They are recorded here so they
 | Mobile / gamepad input | Prototype targets keyboard/mouse only |
 | Settings menu | Deferred (no audio sliders, keybinding, etc.) |
 | Camera zoom | World is small enough for a fixed distance; minimap covers navigation needs |
+| Player-adjustable camera angle | Angle is fixed in the prototype but should be implemented as a parameter; a player-facing tilt slider is a future option |
 
 ---
 
