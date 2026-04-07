@@ -14,15 +14,23 @@ The system should feel **lightweight and ambient** during play (you are barely a
 
 ## Timer Behaviour
 
+Each settlement has two concentric circular zones:
+
+- **Harbour zone** (inner, smaller) — triggers merchant access and records arrival. This is where the boat is considered docked.
+- **Start line** (outer, larger) — the race boundary. The timer watches this zone only.
+
+The two zones are independently sized per settlement. Both have global defaults that can be overridden per settlement where geography requires it.
+
 ### Start
-The timer for a route begins the moment the player's boat **exits a settlement's dock zone**. The departure settlement is recorded as the route origin.
+The timer for a route begins the moment the player's boat **crosses outward through a settlement's start line**. The departure settlement is recorded as the route origin.
 
 - The timer starts automatically — no player action required
-- The HUD displays the running elapsed time from the moment of departure
-- If the player re-enters the departure settlement's dock zone before reaching another settlement, the timer resets (the run is abandoned)
+- The player has the full harbour zone to set their heading and sail configuration before the clock begins — the boat does not start timing until it crosses the outer ring
+- The HUD displays the running elapsed time from the moment of crossing the start line
+- If the player re-crosses the start line back inward (returning to the departure settlement) before reaching another settlement, the timer resets (the run is abandoned)
 
 ### Stop
-The timer stops the moment the player's boat **enters any other settlement's dock zone**. That settlement is recorded as the route destination.
+The timer stops the moment the player's boat **crosses inward through any other settlement's start line**. That settlement is recorded as the route destination.
 
 - The elapsed time is immediately displayed to the player
 - The time is recorded against the route `origin → destination`
@@ -98,7 +106,7 @@ This means the percentile system will have very few data points in the prototype
 
 In addition to the open leaderboard (all boats, all tiers), times are also ranked within each upgrade tier. The boat's tier is **snapshotted at departure** — not read at arrival. This prevents a player from upgrading mid-voyage and claiming a lower tier's record.
 
-> **Snapshot definition:** Tier is the highest tier that has been fully purchased across all upgrade categories at the moment the dock zone is exited. A boat that has any Tier 2 upgrades installed is classified as Tier 2 for that run, regardless of which categories were upgraded.
+> **Snapshot definition:** Tier is the highest tier that has been fully purchased across all upgrade categories at the moment the boat crosses the start line outward. A boat that has any Tier 2 upgrades installed is classified as Tier 2 for that run, regardless of which categories were upgraded.
 
 This creates parallel leaderboards per route — one open and one per tier:
 

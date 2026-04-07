@@ -117,8 +117,7 @@ The HUD uses **corner anchoring** — each corner owns one category of informati
 - Always-visible minimap showing the full playable area at reduced scale.
 - Contents:
   - Shoreline outline
-  - Settlement markers (icons, always visible)
-  - Dock zone rings around each settlement
+  - Settlement markers: each settlement shows a **filled inner circle** (harbour zone) with a **thin outer ring** (start line) — together they read as one marker with two distinct zones
   - Player position and heading (small boat icon)
   - Track line: the path the boat has sailed since last departure (resets on arrival)
   - Wind arrow: current wind direction at the boat's position
@@ -136,7 +135,8 @@ The HUD uses **corner anchoring** — each corner owns one category of informati
 | Steer | A / D keys |
 | Select sail config | 1 (Jib) / 2 (Genoa) / 3 (Spinnaker) |
 | Open map screen | M key or map button |
-| Enter dock zone | Sail into dock zone radius (automatic) |
+| Enter harbour zone | Sail into inner zone radius (automatic) — opens Settlement Screen |
+| Cross start line outbound | Sail past outer ring away from settlement — timer starts |
 
 ---
 
@@ -215,7 +215,7 @@ Shows times for routes arriving at this settlement.
 ### Leaving the Settlement Screen
 | Action | Result |
 |---|---|
-| Depart / close | Returns to In-Game view; timer begins when boat exits dock zone |
+| Depart / close | Returns to In-Game view; timer begins when boat crosses the start line outward |
 | Switch tabs | Stays inside settlement screen |
 
 ---
@@ -234,7 +234,7 @@ A full-screen or large overlay showing the full game world.
 | World map | Full playable area with shoreline and island |
 | Settlement markers | All settlements labelled by name |
 | Player position | Current boat position |
-| Dock zone rings | Visible circles around each settlement |
+| Settlement zone markers | Filled inner circle (harbour zone) + thin outer ring (start line) per settlement |
 | Route leaderboard access | Tap/click a settlement to view its arriving routes and top times |
 
 ### Notes

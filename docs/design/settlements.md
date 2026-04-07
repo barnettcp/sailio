@@ -18,14 +18,23 @@ To whatever extent makes sense, the area immediately surrounding the settlement 
 
 Every settlement, in every version of the game, must have all of the following:
 
-### 1. Dock Zone
-A circular trigger area on the water, centred on the settlement's pier or anchorage. The dock zone:
-- Starts and stops the route timer on entry and exit
-- Triggers the merchant UI when entered
-- Is visible on the minimap as a distinct icon
-- Has a default radius that is tunable globally; individual settlements may override this radius where geography requires it (e.g., a bay settlement whose default zone would protrude beyond a peninsula into open water)
+### 1. Dock Zones
+Each settlement has two concentric circular zones, both centred on the settlement's pier or anchorage:
 
-See [racing-and-timers.md](racing-and-timers.md) for timer behaviour on dock zone entry/exit.
+**Harbour zone** (inner):
+- Triggers merchant and boat yard access when entered
+- Records arrival (timer stops when the boat crosses this ring inward)
+- Represents the settlement itself — the space where the boat is considered docked
+- Should be sized to fit naturally within the settlement's geography (bay, inlet, open anchorage)
+
+**Start line** (outer):
+- The race boundary — the timer starts when the boat crosses this ring outward
+- Larger than the harbour zone; gives the player room to set heading and sail configuration before the clock begins
+- Should be sized for comfortable maneuvering, not so large that it extends into navigational hazards or overlaps a neighbouring settlement's zone
+
+Both zones have independent global defaults, each tunable per settlement where geography requires it. On the minimap, the harbour zone is shown as a filled circle and the start line as a thin outer ring — together they read as a single settlement marker with two distinct interaction boundaries.
+
+See [racing-and-timers.md](racing-and-timers.md) for full timer behaviour.
 
 ### 2. Visual Landmark
 One primary visual feature that makes the settlement identifiable from the water at a distance. The landmark should be:
@@ -120,7 +129,9 @@ Before a settlement can be considered complete and ready for implementation, the
 
 - [ ] Name and economic role
 - [ ] Map position (described relative to geography, not pixel coordinates)
-- [ ] Dock zone anchor point (the pier or anchorage the dock zone centres on)
+- [ ] Dock zone anchor point (the pier or anchorage both zones centre on)
+- [ ] Harbour zone radius (or note that global default applies)
+- [ ] Start line radius (or note that global default applies)
 - [ ] Visual landmark (name, description, and approximate scale)
 - [ ] Economy role (from taxonomy above, or new role defined with full rationale)
 - [ ] Price modifiers for all goods (as a price table, not just percentages)
