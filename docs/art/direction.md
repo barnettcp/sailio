@@ -8,11 +8,13 @@ See [assets.md](assets.md) for the complete asset checklist. See [ux/ui-flows.md
 
 ## Visual Tone
 
-Sailio should look like a **warm, sunny afternoon on the water**. The world is an inviting place — bright, legible, and a little playful. The weather is pleasant and the aesthetic sits somewhere between a children's illustrated map and a clean mobile game: simplified geometry with bold shapes, clear silhouettes, and a palette that feels optimistic without being garish.
+Sailio should look like a **chill day on the water**: thoughtful details where they matter, and a laid-back approach to the rest. The world is bright, legible, and playful. A player who has no experience sailing should have plenty to enjoy; an experienced sailor may appreciate some of the attention to detail ignore details that are intentionally glossed over. The weather is pleasant and the aesthetic sits somewhere between a children's illustrated map and a clean mobile game - simplified geometry with bold shapes, clear silhouettes, and a palette that feels optimistic without being garish.
 
-The environment should feel thoughtful, warm, and populated with details that make you want to keep looking. Vibrant colors are used, sometimes unrealsitically, throughout natural features.
+The environment should feel thoughtful, warm, and alive. The goal is to have it populated with details that are charming when noticed, making you want to keep looking and exploring. While the depth of Breath of the Wild is not intended, the immersive nature of that world is inspiration here.
 
-The one-sentence test: **does it look like somewhere you'd want to spend a quiet afternoon?** If yes, it is on-tone.
+Vibrant colors are used throughout the world in thoughtful and sometimes unrealistic ways. For example, some kinds of grass may be bright magenta against the otherwise green and brown hues of a hillside dotted with trees.
+
+The one-sentence test: **does it look like somewhere you'd want to spend an afternoon?** If yes, it is on-tone.
 
 ### What It Is Not
 - Not realistic. No photorealistic water, no PBR materials, no complex lighting setups.
@@ -25,7 +27,7 @@ The one-sentence test: **does it look like somewhere you'd want to spend a quiet
 ## Color Philosophy
 
 ### World Palette
-The world palette is warm and saturated. Water is the dominant surface and should feel alive — a deep, clear blue-green that catches light rather than sitting flat.
+The world palette is warm and saturated. Water is the dominant surface and should feel alive — a deep, clear blue-green that catches light rather than sitting flat. Long-term vision is the sand-to-blue hues visible in New Zealand near the coastlines, and a deep bluewater blue in between.
 
 | Element | Tone | Notes |
 |---|---|---|
@@ -35,11 +37,21 @@ The world palette is warm and saturated. Water is the dominant surface and shoul
 | Rock | Cool grey | Shoreline rocks and island outcrops. Should contrast cleanly against water. |
 | Sky (if rendered) | Pale warm blue | Horizon haze acceptable. |
 
+### Vibrant Color Accents
+The world uses **intentional, unrealistic color accents** as a design tool — not as decoration, but as a considered choice that makes the world feel alive and slightly magical. A hillside might have a patch of bright magenta grass among otherwise natural greens. A shoreline might have vivid teal moss on otherwise grey rocks.
+
+The governing principle is **purposeful contrast**: accents work because they are surrounded by naturalistic tones. A world that is entirely saturated becomes noise; a world that is mostly grounded and occasionally surprising is memorable. 
+
+- Accents should feel like they belong to the world's internal logic, not like an error or oversight
+- No single area should have more than one or two accent colors competing
+- Accents are most effective at mid-ground — visible enough to reward looking, not so prominent they distract from gameplay
+- Settlement color identities (see below) take precedence over accents near ports — the accent language is primarily for open terrain and waterways
+
 ### Boat Palette
 The player's boat should be the most distinctive object on the water. Sails are the primary visual — they should be bold and readable at minimap scale. A white or cream hull with colourful sails is the default intention; specific colors to be decided at time of production.
 
 ### Settlement Color Identities
-Each settlement has a color personality that runs through its buildings, details, and terrain. These are not strict rules — they are tendencies that make each port feel distinct when the player arrives.
+Each settlement has a color personality that runs through its buildings, details, and terrain. These are not strict rules — they are tendencies that make each port feel distinct when the player arrives. The settlement's harbor zone and start line markers should not have the same color, but should vary slightly in hue to be distinct.
 
 | Settlement | Color personality | Notes |
 |---|---|---|
@@ -47,7 +59,7 @@ Each settlement has a color personality that runs through its buildings, details
 | **Gopher's Bay** | Bright and varied — many distinct colors per building | Cheerful and intellectual. Buildings are individually colored; outer-facing walls are deliberately more muted (this is a designed quirk, not an oversight). |
 | **Woollie** | Bright grass green, white, soft wool tones | Clean and pastoral. White windmill sails and whitewashed buildings against vivid green hillsides. Sheep-grey accents. |
 | **Lincolnston** | Dark slate, charcoal, iron grey — but tasteful | Monochromatic by design, not by neglect. The artfulness matters — think dark tones used as a considered palette, not just "industrial grime." |
-| **Greenway** | Deep forest greens, amber wood tones, sawdust beige | Raw material everywhere. Lumber stacks and log piles are part of the scenery. |
+| **Greenway** | Deep forest greens, amber wood tones, sawdust beige | Raw material neatly stored: Lumber stacks and log piles are part of the scenery. |
 
 ---
 
@@ -86,6 +98,19 @@ The world is lit as a **bright mid-morning to early afternoon**. This is a perma
 - **Ambient light:** Warm, not dark. Shadow areas should still be clearly readable, not muddy.
 - **Water reflections:** Subtle. A light sheen on the water surface that shifts as the boat moves is desirable; complex reflections are not required.
 - **No dramatic lighting effects** in the prototype. No god rays, bloom, or atmospheric fog. These are deferred to visual polish.
+
+### Future: Day/Night Lighting Vision
+If a day/night cycle is added, the nighttime aesthetic should be **light, cheerful, and glowing** — not dark or foreboding. The world at night should feel like a festival rather than a threat.
+
+Glowing elements are the primary light source in this vision:
+- **Bioluminescent water** — shorelines and wakes that glow softly in blues and greens
+- **Campfires** at settlements — warm amber point lights, visible from the water
+- **Settlement windows and lanterns** — warm yellow glow from buildings
+- **Decorative lights** — strings of colored lights at docks, glowing buoys, lanterns on boats
+
+Any object that is intended to glow at night should be **modelled with a separate emissive mesh or material flag** from the start — do not assume this can be added to an existing model without rework. When placing world objects, consider whether they will contribute to the nighttime scene.
+
+The overall palette at night should remain colourful — use the vibrant accent logic from daytime but shifted toward luminous blues, greens, and warm ambers rather than relying on reflected sunlight.
 
 ---
 
