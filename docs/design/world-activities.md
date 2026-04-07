@@ -47,6 +47,43 @@ Fish can be sold at settlements for gold. Not all settlements buy fish — a for
 
 See also: Floating Cargo Recovery below, which can yield items that complement or interact with the fishing system.
 
+### Trophy Fish [FULL — post-prototype]
+
+Beyond the standard species log, a small number of **trophy fish** exist as persistent world entities. These are named individual fish — specific creatures that live in the world and move within a defined territory. Only one player can catch each trophy fish per reset period. When caught, the fish disappears from the world until the next reset.
+
+#### Design Intent
+Standard fishing rewards consistent, patient players with collection progress and gold. Trophy fishing rewards *knowledge of the world and timing*. A player who understands where a trophy fish ranges and fishes that area consistently has a genuine edge over one who fishes randomly. This is skill expression through world knowledge — consistent with the game's broader philosophy.
+
+The exclusivity of the catch (one per reset period, world-wide) turns each trophy fish into a shared hunt. Knowing that nobody else caught "Carl the Great" this month is a distinct kind of satisfaction from a personal best time.
+
+#### Mechanics
+- Trophy fish are individually named entities with a defined **territory** — a region of the map they move within over time. Territories vary in size; some fish roam widely, others are more localised.
+- A trophy fish is caught through the same fishing mechanic as ordinary fish — no special input required. The player simply needs to be fishing within the fish's territory when a catch opportunity rolls.
+- When caught, the trophy fish **despawns** for all players until the next reset. It cannot be caught again that period.
+- Trophy fish are included in the species log and marked distinctly (e.g., a named entry with the catch date).
+- The reward for catching a trophy fish should feel meaningfully special: a significant gold bounty, a unique item, a permanent log entry, or a named acknowledgement visible to other players (e.g., a settlement notice board).
+
+#### Reset Cadence
+Trophy fish reset on the same cadence as leaderboard records — monthly by default. On reset, all trophy fish reappear in their territories.
+
+#### Naming
+Trophy fish are individually named — not just "Large Cod" but a specific name like *Carl the Great*. Names should have personality and fit the maritime world. The name persists across resets (Carl is always Carl); only the catch status resets.
+
+#### Discovery: Open Design Question
+Whether players receive any hint that a trophy fish is nearby is an open design choice with two valid directions:
+
+- **Blind discovery:** No hint. Players discover trophy fish purely through consistent fishing in territories they've learned over time. More magical when it happens; rewards deep world familiarity.
+- **Hinted discovery:** A subtle signal when a trophy fish is catchable nearby — a minimap indicator, a rumour from a settlement NPC, or a disturbance in the water. Rewards engagement and gives players a reason to act on information. Easier to design rewards around.
+
+Both are valid. This should be decided before implementation. Author is leaning towards a hinted discovery, with general geographic hints coming from NPCs within fishing villages.
+
+#### Future: Migration Lore
+Over time, the aggregate locations of all trophy fish catches can be plotted on a world map — a living record of where each fish has been caught across all players and all months. With enough data, patterns emerge: migration routes, seasonal tendencies, territories that shift. This turns the catch history into discoverable lore, rewarding players who pay attention to where catches have been reported.
+
+These maps perhaps may only be visible in fishing villages.
+
+This feature requires storing catch location (position on the map) alongside each trophy fish catch record. The data model should support this from the time trophy fish are implemented, even if the lore map UI is added later.
+
 ---
 
 ## Activity: Instruments
