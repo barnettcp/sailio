@@ -76,7 +76,7 @@ Boat speed per configuration is calculated as:
 - Times are stored per route (origin → destination) and ranked.
 - Multi-stop routes (up to 3 legs) are also tracked as combined times.
 - Records are reset on a regular interval (target: monthly).
-- In the prototype, records are local only. Future versions will support async online leaderboards and ghost-boat replays of recorded voyages.
+- In the prototype, records are local only. Future versions will support online leaderboards shared across all players.
 
 ---
 

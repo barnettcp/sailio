@@ -172,7 +172,7 @@ Post-prototype, times will be submitted to a shared global leaderboard visible t
 - **Queries must be performant at scale.** Leaderboard reads should use indexed, pre-aggregated data — not full table scans. The top-N display and percentile calculation should be pre-computed or cached, not calculated live per request.
 - **Route leaderboards are independent datasets.** Each of the 20 directional routes is its own indexed leaderboard. There is no global "all routes" ranking in the prototype, though this could be a future feature (e.g., a combined score across all routes).
 - **Write path:** a time is written to the server on dock zone arrival. The write can be asynchronous — a slight delay in leaderboard update is acceptable. Failure to write (offline, server error) should degrade gracefully: the time is stored locally and synced on next session.
-- **Ghost boats** (replays of recorded voyages alongside the player) will draw from the same time-series data. Each stored run is a candidate ghost. Architecture should store enough positional data per run to replay it — or defer ghost storage to when that feature is scoped.
+- **Route path review (future consideration).** The record holder's route for a given leg could be displayed as a static path on the map screen — a line showing where they sailed. This requires only the stored waypoint sequence, not a full time-series replay, and does not conflict with the live-world architecture.
 
 ---
 

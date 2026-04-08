@@ -107,7 +107,7 @@ The following are **not** built in the prototype. They are recorded here so they
 | Multi-stop route timing | Single legs only in v0.1 |
 | Record reset interval | No monthly wipe in prototype |
 | Online leaderboards | Local records only |
-| Ghost boat replays | Deferred to post-prototype online feature |
+| Ghost boat replays | Removed from scope — not planned. Live world model replaces async replay concept. |
 | Multiplayer / async other players | Deferred entirely |
 | Idle activities (fishing, instruments, messages in a bottle, floating cargo recovery) | Full system deferred; no placeholder needed. See [design/world-activities.md](../design/world-activities.md) |
 | Idle activity economy (selling fish, floating cargo rewards) | Deferred |
