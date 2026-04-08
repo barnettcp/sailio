@@ -29,13 +29,17 @@ The one-sentence test: **does it look like somewhere you'd want to spend an afte
 ### World Palette
 The world palette is warm and saturated. Water is the dominant surface and should feel alive — a deep, clear blue-green that catches light rather than sitting flat. Long-term vision is the sand-to-blue hues visible in New Zealand near the coastlines, and a deep bluewater blue in between.
 
-| Element | Tone | Notes |
-|---|---|---|
-| Water | Blue-green, bright | The dominant visual. Should feel deep and clear when still, lively when moving. |
-| Grass / terrain | Warm green to golden | Varies by settlement. Woollie is bright green; Greenway slopes toward deeper forest green. |
-| Sand / dirt | Warm tan to ochre | Shoreline transitions, bare ground near settlements. |
-| Rock | Cool grey | Shoreline rocks and island outcrops. Should contrast cleanly against water. |
-| Sky (if rendered) | Pale warm blue | Horizon haze acceptable. |
+The hex values below are **starting suggestions** — grounded in the NZ coastline reference and the warm/saturated tone intent. Adjust freely in Blender and Inkscape and update the table to reflect production decisions. These are the canonical values the Inkscape palette file and assets.md references point to.
+
+| Element | Tone | Starting hex | Notes |
+|---|---|---|---|
+| Water (shallow / coastal) | Blue-green, bright | `#47C6C6` | Sandy teal. NZ coast feel near shorelines. |
+| Water (mid-lake / deep) | Deep clear blue | `#1A7FA8` | Dominant open-water color. |
+| Grass / warm green | Warm green to golden | `#7DC95E` | General terrain. Woollie's bright hillsides. |
+| Grass / forest green | Deep green | `#3D7A45` | Greenway and shadowed slopes. |
+| Sand / dirt | Warm tan to ochre | `#D4A95A` | Shoreline transitions, bare ground near settlements. |
+| Rock | Cool grey | `#8A9BA8` | Shoreline rocks and island outcrops. Contrasts water. |
+| Sky (if rendered) | Pale warm blue | `#C8DFF0` | Horizon haze acceptable. |
 
 ### Vibrant Color Accents
 The world uses **intentional, unrealistic color accents** as a design tool — not as decoration, but as a considered choice that makes the world feel alive and slightly magical. A hillside might have a patch of bright magenta grass among otherwise natural greens. A shoreline might have vivid teal moss on otherwise grey rocks.
