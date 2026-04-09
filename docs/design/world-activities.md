@@ -75,7 +75,7 @@ Whether players receive any hint that a trophy fish is nearby is an open design 
 - **Blind discovery:** No hint. Players discover trophy fish purely through consistent fishing in territories they've learned over time. More magical when it happens; rewards deep world familiarity.
 - **Hinted discovery:** A subtle signal when a trophy fish is catchable nearby — a minimap indicator, a rumour from a settlement NPC, or a disturbance in the water. Rewards engagement and gives players a reason to act on information. Easier to design rewards around.
 
-Both are valid. This should be decided before implementation. Author is leaning towards a hinted discovery, with general geographic hints coming from NPCs within fishing villages.
+Both are valid. This should be decided before implementation. A lean towards hinted discovery is noted, with hints surfaced through a mechanism to be determined — **settlement notice boards** are the most likely approach. Full NPC dialogue is a future consideration and will not appear in the prototype; any hint mechanism chosen here should not assume conversational NPCs as its delivery method.
 
 #### Future: Migration Lore
 Over time, the aggregate locations of all trophy fish catches can be plotted on a world map — a living record of where each fish has been caught across all players and all months. With enough data, patterns emerge: migration routes, seasonal tendencies, territories that shift. This turns the catch history into discoverable lore, rewarding players who pay attention to where catches have been reported.

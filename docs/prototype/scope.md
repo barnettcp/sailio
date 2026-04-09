@@ -9,7 +9,7 @@ The prototype's sole purpose is to prove the core loop: **sail, trade, time, ran
 ## In Scope
 
 ### World & Map
-- A single hand-built map with **4–5 settlements** positioned on open water
+- A single hand-built map with **five settlements** positioned on open water
 - Water boundaries defining the playable area (from a simplified or placeholder shape; real lake shapefile import may be used if straightforward, otherwise a hand-shaped polygon is fine)
 - Out-of-bounds areas marked and enforced (boat cannot leave the playable area)
 - No dynamic weather, tides, or hazards
@@ -63,7 +63,7 @@ The prototype's sole purpose is to prove the core loop: **sail, trade, time, ran
 
 ### Timer & Racing System
 - A timer **starts automatically** when the player departs a settlement
-- The timer **stops and is recorded** when the player enters another settlement's **dock zone** (a circular trigger area around each settlement, visible on the minimap)
+- The timer **stops and is recorded** when the player enters another settlement's **harbour zone** (inner zone; the filled circle visible on the minimap)
 - Times are stored **locally** per route (origin → destination, directional)
 - A **top-3 leaderboard** per route is displayed at each settlement (or on the in-game map/HUD)
 - Records persist across play sessions (saved to disk)
@@ -85,6 +85,7 @@ The prototype's sole purpose is to prove the core loop: **sail, trade, time, ran
   - The player's current position and heading
   - A **track line** of the boat's path since it last departed a settlement (resets on arrival)
 - Main menu with **New Game** and **Continue**
+- **New Game** requires a confirmation step before wiping all progress (upgrades, gold, cargo, times, and personal bests)
 - Basic save/load (auto-save on arriving at a settlement)
 
 ### Presentation

@@ -37,7 +37,7 @@ Two instruments are always visible:
 | Instrument | What it shows |
 |---|---|
 | **True wind indicator** | Compass direction of wind at the boat's current position. Shown as an arrow on the minimap and/or compass rose on the HUD. |
-| **Apparent wind angle** | Angle of wind relative to the boat's current heading. 0° = dead ahead, 90° = wind abeam, 180° = dead downwind. This is the primary instrument for sail selection. |
+| **Apparent wind angle** | The true apparent wind angle: the combined result of the wind field direction and the boat's own velocity vector, expressed relative to the boat's heading. 0° = dead ahead, 90° = wind abeam, 180° = dead downwind. This is what the masthead vane shows in real life and is the primary instrument for sail selection. At low boat speeds the difference from raw wind angle is small; at higher speeds it shifts noticeably toward the bow. |
 | **Wind speed** | Current wind speed at the boat's position, in knots. |
 
 > **Design note:** True wind direction helps with navigation and route planning. Apparent wind angle is what a real sailor watches to decide when to tack or which sail to set. Both are shown because they serve different decisions.

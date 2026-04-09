@@ -38,8 +38,17 @@ In-Game (Sailing)  ←───────────────────�
 ### Actions
 | Action | Result |
 |---|---|
-| New Game | Clears any existing save, begins tutorial flow, loads In-Game |
+| New Game | Triggers a confirmation dialog (see below), then clears all save data and begins tutorial flow |
 | Continue | Loads existing save, drops player directly into In-Game at last known position |
+
+### New Game Confirmation
+Before clearing any data, New Game shows a confirmation dialog:
+
+> *"Starting a new game will erase all progress — upgrades, gold, cargo, route times, and personal bests. This cannot be undone. Continue?"*
+
+Two buttons: **Yes, start over** / **Cancel**. Cancel returns to the main menu with no changes. Confirmation clears all save data and begins the tutorial.
+
+The tutorial always plays on a new game in the prototype. A future version may make it optional for returning players.
 
 ### Notes
 - No settings screen in the prototype. Settings are deferred.
@@ -271,33 +280,4 @@ The following screens are not built in the prototype but should be anticipated i
 | Tier 2–4 Boat Yard | Extended upgrade screen when multiple tiers exist |
 | Messages in a Bottle (compose) | Text entry + gift selection interface |
 | Floating Cargo recovery prompt | Brief overlay when a floating item is nearby |
-
-
-```
-┌─────────────────────────────────────────────┐
-│ [Timer]                     [Compass Rose]  │
-│ [Wind speed · True wind direction]          │
-│                                             │
-│                                             │
-│            (game world)                     │
-│                                             │
-│                                             │
-│ [Cargo · Money]              [Minimap]      │
-│ [Sail config selector]                      │
-└─────────────────────────────────────────────┘
-```
-
-| Corner | Contents | Notes |
-|---|---|---|
-| **Top-left** | Active timer, wind speed, true wind direction | Timer is the most urgent read; wind instruments sit with it since both inform tacking decisions |
-| **Top-right** | Compass rose (with boat heading bearing) | Orientation tool; stacked above minimap on the same side |
-| **Bottom-left** | Current cargo, money, sail configuration selector | Lower-urgency inventory; sail config is changed deliberately, not reactively |
-| **Bottom-right** | Minimap (track line, wind arrow, settlement markers, dock zone rings) | Standard convention; pairs with compass above |
-
-### Apparent Wind Angle
-
-The apparent wind angle (boat-relative) is distinct from the true wind direction displayed in the top-left. Because this instrument is checked constantly during a sail \u2014 it drives the core decision of which sail to set and when to tack \u2014 it should be placed where the player's eye already is: near the boat on screen. Consider a small arc or needle indicator overlaid just above or below the boat in the 3D view (a near-diegetic element), rather than in a corner. Exact placement to be determined during implementation.
-
----
-
 

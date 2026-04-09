@@ -30,7 +30,7 @@ The timer for a route begins the moment the player's boat **crosses outward thro
 - If the player re-crosses the start line back inward (returning to the departure settlement) before reaching another settlement, the timer resets (the run is abandoned)
 
 ### Stop
-The timer stops the moment the player's boat **crosses inward through any other settlement's start line**. That settlement is recorded as the route destination.
+The timer stops the moment the player's boat **crosses inward through any other settlement's harbour zone** (inner zone). That settlement is recorded as the route destination.
 
 - The elapsed time is immediately displayed to the player
 - The time is recorded against the route `origin → destination`
@@ -52,7 +52,15 @@ $$5 \times 4 = 20 \text{ directional routes}$$
 Each route maintains its own independent leaderboard and time history.
 
 ### Multi-Stop Routes (deferred)
-Future versions will track combined times for sequences of up to 3 legs (e.g., Rockaway → Woollie → Greenway as a single timed passage). The data model should not prevent this: storing individual leg times with session identifiers allows multi-stop totals to be calculated without re-recording data.
+Future versions will track combined times for sequences of up to 3 legs (e.g., Rockaway → Woollie → Greenway as a single timed passage). This is the natural next step after the prototype is complete — no map changes are required, and the existing timing and settlement infrastructure already supports it.
+
+With 5 settlements, 3-leg routes add:
+
+$$5 \times 4 \times 4 = 80 \text{ additional multi-stop routes}$$
+
+(5 starting settlements × 4 choices for the second leg × 4 choices for the third leg, where the third leg may return to the origin but not the immediately prior settlement.)
+
+The data model should not prevent this: storing individual leg times with session identifiers allows multi-stop totals to be calculated without re-recording data.
 
 ---
 
@@ -106,7 +114,7 @@ This means the percentile system will have very few data points in the prototype
 
 In addition to the open leaderboard (all boats, all tiers), times are also ranked within each upgrade tier. The boat's tier is **snapshotted at departure** — not read at arrival. This prevents a player from upgrading mid-voyage and claiming a lower tier's record.
 
-> **Snapshot definition:** Tier is the highest tier that has been fully purchased across all upgrade categories at the moment the boat crosses the start line outward. A boat that has any Tier 2 upgrades installed is classified as Tier 2 for that run, regardless of which categories were upgraded.
+> **Snapshot definition:** Tier is determined by the **highest individual upgrade tier installed** at the moment the boat crosses the start line outward — not whether all categories at that tier have been purchased. A boat with any Tier 2 upgrade installed is classified as Tier 2 for that run, regardless of which categories were upgraded. This prevents a player from upgrading most categories to a higher tier while deliberately leaving one at a lower tier to remain classified below their actual upgrade level.
 
 This creates parallel leaderboards per route — one open and one per tier:
 
@@ -154,13 +162,15 @@ Monthly is the recommended default. Consider allowing the player to see when the
 
 ## Personal Bests
 
-In addition to global leaderboard times, the game tracks each player's **personal best** per route separately. Personal bests are **never reset** by the cadence wipe — they are permanent records of the player's own performance.
+In addition to global leaderboard times, the game tracks each player's **personal best** per route separately. Personal bests are **never reset** by the cadence wipe — they persist across monthly resets and can be seen alongside the current leaderboard even when they predate it.
 
 The player can always see:
 - Their personal best for any route
 - How their personal best ranks against the current leaderboard (which may reset around it)
 
 This means a player whose personal best was set two seasons ago can still see it, even if it no longer appears on the active leaderboard.
+
+**New Game wipes all data.** Choosing New Game from the main menu clears everything — upgrades, gold, cargo, all route times, and personal bests. The player is shown a confirmation warning before this executes. See [ux/ui-flows.md](../ux/ui-flows.md) for the confirmation dialog spec.
 
 ---
 

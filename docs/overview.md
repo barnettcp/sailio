@@ -20,7 +20,7 @@ A timer begins the moment a boat leaves a settlement and ends when it arrives at
 There is no mechanical incentive to sail without cargo. Boat speed is entirely a function of sail configuration, wind angle, and upgrades — carrying a full hold is identical in speed to sailing empty. This means trade runs and racing runs are the same run. Leaderboard times are not reserved for min-maxers.
 
 ### 4. The World Is Small and Knowable
-The prototype world has 4–5 settlements, each 5–10 minutes apart by sail. Players should be able to learn the whole map quickly, develop preferences for certain routes, and feel a sense of ownership over the world. Scale is kept deliberately small so that every settlement feels distinct and visited, not anonymous.
+The prototype world has **five settlements**, each 5–10 minutes apart by sail. Players should be able to learn the whole map quickly, develop preferences for certain routes, and feel a sense of ownership over the world. Scale is kept deliberately small so that every settlement feels distinct and visited, not anonymous.
 
 ### 5. Idle Time Is Earned, Not Wasted
 Time on the water between ports is gameplay. Fishing, playing an instrument, and other modular idle activities give players something to do during longer passages. These activities are self-contained and expandable — they exist to make the voyage feel alive, not to add grind.
@@ -74,7 +74,7 @@ Boat speed per configuration is calculated as:
 - A timer starts automatically when a boat departs a settlement.
 - The timer stops and is recorded when the boat arrives at any other settlement.
 - Times are stored per route (origin → destination) and ranked.
-- Multi-stop routes (up to 3 legs) are also tracked as combined times.
+- Multi-stop route tracking (up to 3 legs combined) is planned as a post-prototype feature. See [design/racing-and-timers.md](design/racing-and-timers.md).
 - Records are reset on a regular interval (target: monthly).
 - In the prototype, records are local only. Future versions will support online leaderboards shared across all players.
 
