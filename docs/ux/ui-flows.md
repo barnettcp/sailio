@@ -144,14 +144,14 @@ The HUD uses **corner anchoring** — each corner owns one category of informati
 | Steer | A / D keys |
 | Select sail config | 1 (Jib) / 2 (Genoa) / 3 (Spinnaker) |
 | Open map screen | M key or map button |
-| Enter harbour zone | Sail into inner zone radius (automatic) — opens Settlement Screen |
+| Enter harbour zone | Sail into inner zone radius — timer stops automatically; arrival overlay shown; cooldown window begins (see Arrival Overlay) |
 | Cross start line outbound | Sail past outer ring away from settlement — timer starts |
 
 ---
 
 ## Overlay: Arrival [PROTOTYPE]
 
-**How the player gets here:** Automatically on entering a settlement's dock zone while on a timed leg.
+**How the player gets here:** Automatically on entering a settlement's harbour zone while on a timed leg.
 
 Displayed as a brief overlay on top of the In-Game view. Auto-dismisses after a few seconds, or immediately on any input.
 
@@ -160,17 +160,24 @@ Displayed as a brief overlay on top of the In-Game view. Auto-dismisses after a 
 - Elapsed time for the completed leg
 - **Personal best indicator:** "New personal best!" if the time beats the player's previous best on this route
 - **Leaderboard position:** Raw rank among all stored local times (e.g., "#2 on this route")
-- A prompt to open the Settlement Screen or continue sailing
+
+### Cooldown and Docking
+Docking is automatic — no player confirmation is required, and the timer is never held waiting for input. After the overlay dismisses, a brief cooldown window (suggested: 5–10 seconds total from zone entry) remains open:
+- **If the boat is still inside the harbour zone** when the cooldown expires, the Settlement Screen opens automatically.
+- **If the player sails back out** during the cooldown, the Settlement Screen does not open. The arrival time is still recorded — the player simply chose not to stop.
+- The player can also open the Settlement Screen manually at any point while inside the harbour zone, before the cooldown expires.
+
+This means a player can pass through a settlement's harbour zone, see their time, and continue sailing without any forced interaction.
 
 ### Notes
-- If a run was abandoned (player re-entered departure settlement), no overlay is shown — the timer silently resets.
+- If a run was abandoned (player re-entered departure settlement's harbour zone), no overlay is shown — the timer silently resets.
 - Percentile rank is available on the full leaderboard inside the settlement, not shown here.
 
 ---
 
 ## Screen: Settlement Screen [PROTOTYPE]
 
-**How the player gets here:** On entering any settlement's dock zone. The boat is considered docked.
+**How the player gets here:** After the arrival cooldown window expires while the boat remains in the harbour zone; or immediately on player input (tapping/clicking the Settlement Screen prompt) from within the harbour zone at any time.
 
 A full-screen overlay replacing the sailing view. Three tabs: Merchant, Boat Yard, Leaderboard.
 

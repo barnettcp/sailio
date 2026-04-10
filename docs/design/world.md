@@ -80,19 +80,23 @@ Future maps may include additional smaller islands, rocks, and navigable gaps as
 
 The world includes permanent landmarks that help players orient without consulting the minimap. These are visible from the water and distinctive enough to be recognisable at a glance.
 
-### Prototype Landmarks
+### Settlement Landmarks (Prototype)
 
-At least two or three landmarks should be present in the prototype:
+Each of the five prototype settlements has a defined primary landmark — the visual feature that makes it identifiable from the water at distance. These are specified in [prototype/settlements.md](../prototype/settlements.md). Examples from the prototype:
 
-| Landmark | Purpose |
+| Settlement | Landmark |
 |---|---|
-| **Lighthouse** | Most recognisable maritime landmark; natural at a headland or island point |
-| **Castle or tower** | A distinctive hilltop structure visible from a distance |
-| **Distinctive landmass** | A prominent headland, cliff, or peak that reads clearly from the water |
+| **Rockaway** | Long timber dock extending into the bay, with market tents at the end |
+| **Woollie** | Windmills on the island high ground, blades turning |
+| **Lincolnston** | Wide foundry headquarters building with a chimney stack |
+| **Greenway** | Giant old-growth trees, tallest natural feature on the map |
+| **Gopher's Bay** | Tall chart house on the waterfront, distinctive and colourful |
 
-Landmarks are **static scene objects** — they are placed by hand, not generated. They do not have gameplay function in the prototype.
+Landmarks are **static scene objects** — placed by hand, not generated. They do not have gameplay function in the prototype.
 
-> **Future:** Landmarks may eventually have associations — a lighthouse could mark a race turning mark, a castle could be a settlement site.
+**Landmark design guidance for future settlements:** Landmarks should be imaginative and specific to the settlement's character. The goal is that a player seeing a landmark for the first time can make an educated guess about what kind of place they are approaching. A windmill, a smokestack, a giant tree all communicate something about the settlement's identity. Prefer landmark types that are novel to this world and its tone over generic maritime structures.
+
+> **Future:** Landmarks may eventually have mechanical associations — a race turning mark, a settlement expansion, a point of interest tied to world activities.
 
 ### Buoys
 
@@ -110,20 +114,35 @@ Small buoys near each settlement for visual dressing and a sense of place. Purel
 
 ## Dock Zones
 
-Each settlement has a **dock zone** — a circular trigger area centred on the settlement. When the player's boat enters this circle, the settlement is considered reached:
+Each settlement has two concentric circular zones centred on the settlement's pier or anchorage.
 
-- The **arrival timer stops** and the time is recorded
-- The player is prompted to enter the settlement (or docking is automatic — TBD in UI design)
-- The **departure timer starts** when the boat exits the dock zone
+### Harbour Zone (inner)
 
-The dock zone circle is:
-- **Visible on the minimap** as a faint ring around the settlement marker
-- **Not visually intrusive** in the main game view — it should be subtle or invisible in the 3D world, with docking communicated through UI feedback (a sound cue, a prompt, a HUD change) rather than a visible boundary line
-- **Sized consistently** across all settlements, tuned so that arrival feels natural rather than requiring precise positioning
+The harbour zone is the inner, smaller zone representing the settlement itself:
+
+- **Docking is automatic.** The arrival timer stops and the time is recorded the moment the boat crosses this ring inward. No player confirmation is required.
+- A brief **cooldown window** (suggested: 5–10 seconds) begins on zone entry. During this window the player can sail back out without committing to a docking interaction — useful if the player entered the zone incidentally while passing through.
+- If the boat remains in the zone after the cooldown expires, the Settlement Screen opens automatically.
+- The player can also open the Settlement Screen manually at any point while inside the harbour zone.
+- Both zones have global radius defaults, independently tunable per settlement where geography requires it.
+
+### Start Line (outer)
+
+The start line is the outer, larger zone defining the race boundary:
+
+- The **timer starts** when the boat crosses this ring **outward** on departure.
+- The start line has no effect on inbound crossings — it is transparent to an arriving boat. Only the harbour zone records arrival.
+- Sized to give the player comfortable room to set heading and sail configuration before the clock begins.
+
+### Minimap Representation
+
+On the minimap each settlement marker shows a **filled inner circle** (harbour zone) with a **thin outer ring** (start line) — together they read as a single marker with two distinct interaction boundaries.
 
 This approach is deliberately arcade-friendly. No threading through buoy gates, no precise manoeuvring into a slip. You sail to a settlement, you arrive. The skill is in getting there fast, not docking.
 
 > **Future:** Dock zone shape may eventually be replaced or supplemented by a more detailed harbour entry (breakwater, channel, timed approach). Red/green buoys at harbour entrances are a possible future embellishment, but will remain visual-only unless grounding mechanics are implemented.
+
+See [design/racing-and-timers.md](racing-and-timers.md) for full timer behaviour and [design/settlements.md](settlements.md) for per-settlement zone sizing guidance.
 
 ---
 
@@ -141,14 +160,14 @@ This approach is deliberately arcade-friendly. No threading through buoy gates, 
 
 ## Settlements
 
-4–5 settlements are placed after the water shape is finalised. Settlement placement follows these principles:
+**Five settlements** are placed on the prototype map. Settlement placement follows these principles:
 
 - Each settlement sits on a **natural feature** — a sheltered bay, a headland, the mouth of a channel, a wider basin
 - No two settlements should feel physically identical; each position should have a distinct read on the minimap and from the water
 - Placement creates **a variety of route characters**: some routes are a straight reach, some require tacking up a channel, some pass through a narrows
 - Settlements are spaced to produce the target travel times above — not evenly distributed if uneven spacing makes for better routes
 
-Specific settlements are defined in [prototype/settlements.md](../prototype/settlements.md) once the map shape is locked.
+The five prototype settlements and their map positions, landmarks, and economic roles are defined in [prototype/settlements.md](../prototype/settlements.md).
 
 ---
 
